@@ -1,15 +1,16 @@
 {
-  "name": "customcrosswordjson",
+  "name": "customwordsearchjson",
   "version": "1.0.0",
   "description": "this is a simple webpage that lets you manually create custom crossword puzzles and save them in a JSON format",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "start:dev": "webpack-dev-server",
+    "build": "npx webpack --config webpack.config.prod.js"
   },
   "keywords": [],
   "author": "TheJoaster",
-  "license": "GPL3",
+  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",

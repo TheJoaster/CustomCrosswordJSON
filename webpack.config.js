@@ -1,11 +1,28 @@
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     mode: 'development',
-    src: [
+    entry: [
         './src/main.js'
     ],
-    devtool: 'source-maps',
+    devtool: 'source-map',
+    devServer: {
+        watchFiles: path.join(__dirname, 'src'),
+        hot: true,
+        open: true,
+        liveReload:true,
+        client: {
+            overlay: true
+        }
+    },
     plugins: [
-
+        new HtmlWebpackPlugin({
+            title: 'Crossword Creator Test',
+            template: path.resolve('./src/index.html')
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [
@@ -14,7 +31,7 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                    'sass'
+                    'sass-loader'
                 ]
             },
             {
