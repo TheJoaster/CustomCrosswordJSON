@@ -7,11 +7,12 @@
 </head>
 <body>
     <div id="wsconfig">
-        <input type="range" name="wssize" id="wordsearchsize" min="5" max="25"> 
+        <input type="range" name="wssize" id="wordsearchwidth" min="5" max="25"> 
+        <input type="range" name="wssize" id="wordsearchheight" min="5" max="25"> 
         <input type="text" name="wsname" id="wordsearchtitle" placeholder="word search title">
         <button>Create New Word Search Puzzle</button>
     </div>
-    <div id="wsmodify"><input type="text" placeholder="enter a word"><button id="addword">Add new word!</button></div>
-    <div id="wsm"></div><div id="wordlist"></div>
+    <div id="wsmodify"><input type="text" placeholder="enter a word" id="wordinput"><button id="addword">Add new word/phrase!</button></div>
+    <div id="gamecontainer"></div>
 </body>
 </html>
