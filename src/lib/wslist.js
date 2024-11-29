@@ -60,6 +60,7 @@ class WSList {
         let wordItem = document.createTextNode(word);
         let deleteButton = document.createElement('button');
         deleteButton.setAttribute('class', 'wsdeletebutton');
+        deleteButton.appendChild(document.createTextNode("X"));
         deleteButton.onclick = (ev) => {
             ev.preventDefault();
             this.deleteWord(word,itemElement);
